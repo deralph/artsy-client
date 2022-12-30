@@ -20,7 +20,7 @@ const Home:React.FC = () => {
 
           <h2 className='font-primary font-bold text-[28px] text-white mb-[5%] md:text-2xl'>A journal of creativity</h2>
           <p className='text-white font-secondary font-normal text-[50px] mb-[5%] tracking-wider md:text-[40px] sm:text-[30px]'>FROM THE STUDIO TO YOUR DOORSTEP</p>
-          <a href="" className='bg-white rounded-3xl px-[10%] py-[1.5%] font-primary text-3xl font-bold sm:text-xl'>Explore</a>
+          <a href="/" className='bg-white rounded-3xl px-[10%] py-[1.5%] font-primary text-3xl font-bold sm:text-xl'>Explore</a>
         </div>
         </article>
       
