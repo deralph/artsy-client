@@ -7,7 +7,7 @@ module.exports = {
         landback: "url('/../../public/Background.jpg')",
       },
       colors: {
-        primary: "#4063d6",
+        primary: "#1e1e1e",
         secondary: "#07174b",
         // secondary: {
         //   100: "#E2E2D5",
@@ -31,6 +31,9 @@ module.exports = {
 
       lg: { max: "1023px" },
       // => @media (max-width: 1023px) { ... }
+
+      slg: { max: "900px" },
+      // => @media (max-width: 900px) { ... }
 
       md: { max: "767px" },
       // => @media (max-width: 767px) { ... }

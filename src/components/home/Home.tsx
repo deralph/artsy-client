@@ -4,9 +4,9 @@ import { FaBars } from "react-icons/fa";
 const Home:React.FC = () => {
   return (
     <section className='home h-screen w-screen'>
-      <nav className="flex justify-between items-center w-screen py-[2%] px-[10%] lg:px-[5%] sm:py-[5%]">
-        <img src="/Artsy.png" alt="logo"  className='bg-white'/>
-        <ul className='flex text-white font-medium w-3/5 justify-between text-2xl lg:w-[70%] md:text-base sm:hidden'>
+      <nav className="text-white flex justify-between items-center w-screen py-[2%] px-[10%] lg:px-[5%] sm:py-[5%]">
+        <p className="font-secondary font-normal text-3xl">ARTSY</p>
+        <ul className='flex font-medium w-3/5 justify-between text-2xl lg:w-[70%] md:text-base sm:hidden'>
           <li className=''> Creatives</li>
           <li className=' '>Marketplace</li>
           <li className=' '>Collections</li>

@@ -7,6 +7,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
 ul {
   list-style: none;
@@ -15,7 +25,7 @@ a {
   text-decoration: none;
 }
 img {
-  object-fit: contain;
+  object-fit: fill;
 }
 textarea {
   resize: none;
@@ -33,4 +43,21 @@ button {
 .home {
   background: url(../public/Home.png);
   background-size: contain;
+}
+
+@media (max-width: 900px) {
+  .login {
+    background: url(../public/Group\ 3.png);
+    background-size: 100% 100%;
+    position: relative;
+  }
+  .login::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    z-index: 10;
+  }
 }
