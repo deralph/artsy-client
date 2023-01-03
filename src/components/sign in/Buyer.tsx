@@ -22,10 +22,7 @@ const Buyer: React.FC<Login> = ({ login }) => {
 
   return (
     <div>
-      <label
-        htmlFor="email"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="email" className="label ">
         Email
       </label>
       <input
@@ -33,13 +30,10 @@ const Buyer: React.FC<Login> = ({ login }) => {
         value={form.email}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="email"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
 
-      <label
-        htmlFor="username"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="username" className="label ">
         Username
       </label>
       <input
@@ -47,12 +41,9 @@ const Buyer: React.FC<Login> = ({ login }) => {
         value={form.username}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="username"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
-      <label
-        htmlFor="password"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="password" className="label ">
         Password
       </label>
       <input
@@ -60,7 +51,7 @@ const Buyer: React.FC<Login> = ({ login }) => {
         value={form.password}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="password"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
       {!login && (
         <div className="flex items-center">

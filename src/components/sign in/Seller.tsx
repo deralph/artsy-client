@@ -23,10 +23,7 @@ const Seller: React.FC = () => {
 
   return (
     <div>
-      <label
-        htmlFor="fullName"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="fullName" className="label">
         FullName
       </label>
       <input
@@ -34,13 +31,10 @@ const Seller: React.FC = () => {
         value={form.fullName}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="fullName"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
 
-      <label
-        htmlFor="studio"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="studio" className="label">
         Studio
       </label>
       <input
@@ -48,12 +42,9 @@ const Seller: React.FC = () => {
         value={form.studio}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="studio"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
-      <label
-        htmlFor="nationality"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="nationality" className="label">
         Nationality
       </label>
       <input
@@ -61,12 +52,9 @@ const Seller: React.FC = () => {
         value={form.nationality}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="nationality"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
-      <label
-        htmlFor="username"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="username" className="label">
         Username
       </label>
       <input
@@ -74,12 +62,9 @@ const Seller: React.FC = () => {
         value={form.username}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="username"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
-      <label
-        htmlFor="email"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="email" className="label">
         Email
       </label>
       <input
@@ -87,12 +72,9 @@ const Seller: React.FC = () => {
         value={form.email}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="email"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
-      <label
-        htmlFor="password"
-        className="font-primary text-white font-bold text-xl "
-      >
+      <label htmlFor="password" className="label">
         Password
       </label>
       <input
@@ -100,7 +82,7 @@ const Seller: React.FC = () => {
         value={form.password}
         onChange={(e) => handleInputs(e, setForm, form)}
         name="password"
-        className="mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 text-white"
+        className="input"
       />
       <div className="flex items-center">
         <input

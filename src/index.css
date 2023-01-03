@@ -56,8 +56,15 @@ button {
     position: absolute;
     top: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     width: 100%;
     z-index: 10;
   }
+}
+
+.label {
+  @apply font-primary text-white font-bold text-xl;
+}
+.input {
+  @apply mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 sm:p-1 text-white;
 }
