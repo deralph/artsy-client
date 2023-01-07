@@ -1,9 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Navbar from "../navbar/Navbar";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
 import { FaCloudUploadAlt } from "react-icons/fa";
+import axios from "../../extra/axios";
 
 const Product: React.FC = () => {
+  const [preview, setPreview] = useState<string | any>("");
+
   const image: React.MutableRefObject<any> = useRef();
   const artName: React.MutableRefObject<any> = useRef();
   const description: React.MutableRefObject<any> = useRef();
@@ -13,7 +16,7 @@ const Product: React.FC = () => {
 
   const formData = new FormData();
 
-  const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const submit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
     formData.append("image", image.current.files[0]);
@@ -26,6 +29,16 @@ const Product: React.FC = () => {
     console.log(description.current.value);
     console.log(image.current.files[0], 3);
     console.log(typeof image.current.files[0], 4);
+    console.log("before");
+    try {
+      const { data } = await axios.post("/art/upload", formData);
+      console.log(data);
+      console.log("done sucess");
+    } catch (error) {
+      console.log(error);
+      console.log("done error");
+    }
+    console.log("done");
   };
 
   return (
@@ -53,8 +66,18 @@ const Product: React.FC = () => {
                 className="hidden"
                 accept="image/*"
                 ref={image}
+                onChange={() =>
+                  setPreview(URL.createObjectURL(image.current.files[0]))
+                }
               />
             </div>
+            {preview && (
+              <img
+                src={URL.createObjectURL(image.current.files[0])}
+                alt="art pics"
+                className="w-full min-h-[300px] h-[30vh] border-solid border-[6px] border-[#B9B9B9B2] my-7 flex flex-col items-center justify-center object-"
+              />
+            )}
             <label
               htmlFor="art name"
               className="font-primary text-2xl font-black "
