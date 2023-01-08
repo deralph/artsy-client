@@ -31,7 +31,7 @@ const Product: React.FC = () => {
     console.log(typeof image.current.files[0], 4);
     console.log("before");
     try {
-      const { data } = await axios.post("/art/upload", formData);
+      const { data } = await axios.post("/art/upload", formData,Headers: { "Content-Type": "multipart/form-data" },);
       console.log(data);
       console.log("done sucess");
     } catch (error) {
