@@ -5,7 +5,7 @@ import { FaCloudUploadAlt } from "react-icons/fa";
 import axios from "../../extra/axios";
 
 const Product: React.FC = () => {
-  const [preview, setPreview] = useState<string | any>("");
+  const [preview, setPreview] = useState<string | unknown>("");
 
   const image: React.MutableRefObject<any> = useRef();
   const artName: React.MutableRefObject<any> = useRef();
@@ -57,7 +57,7 @@ const Product: React.FC = () => {
           </p>
         </div>
         <div className="flex justify-center ">
-          <form action="" className="max-w-[700px] w-full mb-20">
+          <form className="max-w-[700px] w-full mb-20">
             <div
               className="w-full min-h-[300px] h-[30vh] border-dashed border-[6px] border-[#B9B9B9B2] my-7 flex flex-col items-center justify-center"
               onClick={() => image.current.click()}
@@ -76,12 +76,14 @@ const Product: React.FC = () => {
                 }
               />
             </div>
-            {preview && (
+            {preview ? (
               <img
                 src={URL.createObjectURL(image.current.files[0])}
                 alt="art pics"
                 className="w-full min-h-[300px] h-[30vh] border-solid border-[6px] border-[#B9B9B9B2] my-7 flex flex-col items-center justify-center object-"
               />
+            ) : (
+              ""
             )}
             <label
               htmlFor="art name"
