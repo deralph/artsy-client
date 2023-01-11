@@ -19,6 +19,7 @@ function App() {
           <Route path="/login" element={<Logins />} />
           <Route path="/singlePage" element={<SingleArt />} />
           <Route path="/popup" element={<Popup />} />
+          <Route path="*" element={<h1>ERROR PAGE</h1>} />
         </Routes>
       </main>
     </BrowserRouter>
