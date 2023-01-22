@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/home/Home";
+import Main from "./components/main/Main";
 import Popup from "./components/product/Popup";
 import Product from "./components/product/Product";
 import SingleArt from "./components/product/SingleArt";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Logins />} />
           <Route path="/singlePage" element={<SingleArt />} />
           <Route path="/popup" element={<Popup />} />
+          <Route path="/main" element={<Main />} />
           <Route path="*" element={<h1>ERROR PAGE</h1>} />
         </Routes>
       </main>

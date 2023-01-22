@@ -17,7 +17,9 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
+body {
+  background: #eee !important;
+}
 ul {
   list-style: none;
 }

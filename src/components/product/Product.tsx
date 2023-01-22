@@ -49,6 +49,35 @@ const Product: React.FC = () => {
     console.log("done");
   };
 
+  const testLogin = async () => {
+    // e.preventDefault()
+    try {
+      const { data } = await axios.post("/auth/login", {
+        username: "buig Ralph",
+        email: "jraph@gmail.com",
+        password: "12345678",
+        seller: false,
+      });
+      console.log(data);
+      console.log("logged in");
+      console.log("cleck");
+    } catch (error) {
+      console.log(error);
+      console.log("done error");
+    }
+  };
+  const testMiddleware = async () => {
+    // e.preventDefault()
+    try {
+      const { data } = await axios.get("/art/check-middleware");
+      console.log(data);
+      console.log("checked");
+    } catch (error) {
+      console.log(error);
+      console.log("done error");
+    }
+  };
+
   return (
     <section className="">
       <Navbar />
@@ -173,6 +202,18 @@ const Product: React.FC = () => {
           </form>
         </div>
       </article>
+      <button
+        className="p-4 m-4 bg-black text-white"
+        onClick={() => testLogin()}
+      >
+        login
+      </button>
+      <button
+        className="p-4 m-4 bg-black text-white"
+        onClick={() => testMiddleware()}
+      >
+        check middleware
+      </button>
     </section>
   );
 };
