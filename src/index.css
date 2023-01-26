@@ -18,7 +18,8 @@
   scrollbar-width: none; /* Firefox */
 }
 body {
-  /* background: #eee !important; */
+  /* background: #000 !important; */
+  overflow-x: hidden;
 }
 ul {
   list-style: none;
@@ -62,6 +63,16 @@ button {
     width: 100%;
     z-index: 10;
   }
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 90%;
+  z-index: 10;
 }
 
 .label {
