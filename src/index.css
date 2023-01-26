@@ -18,7 +18,7 @@
   scrollbar-width: none; /* Firefox */
 }
 body {
-  background: #eee !important;
+  /* background: #eee !important; */
 }
 ul {
   list-style: none;
