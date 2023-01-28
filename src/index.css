@@ -64,15 +64,23 @@ button {
     z-index: 10;
   }
 }
-
+/* .slide1 {
+  animation: slide1 0.5s ease-in 1 5s;
+  padding: 0 5%;
+} */
+/* .slide1::after {
+  animation: slide1 0.5s ease-in 1 5s;
+} */
+.slide1::after,
 .slide::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
   width: 90%;
   z-index: 10;
+  display: block;
+  animation: example 5s linear 1;
 }
 
 .label {
@@ -82,14 +90,28 @@ button {
   @apply mb-8 border-[2px] border-solid border-white focus:border-[#0094FF] bg-transparent w-full mt-4 p-3 sm:p-1 text-white;
 }
 
-/* .slick-slide {
-  transition: all 1s ease-in-out;
+/* The animation code */
+@keyframes example {
+  0% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.7);
+  }
 }
-
-.slick-slide.active {
-  opacity: 1;
-}
-
-.slick-slide:not(.active) {
-  opacity: 0.5;
+/* @keyframes slide1 {
+  0% {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1) !important;
+  }
+  50% {
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(0.4) !important;
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
 } */

@@ -30,8 +30,8 @@ const Slider_: React.FC = () => {
       <div className="h-[50vh] w-full relative">
         <div
           className={` px-[5%] m-auto ${
-            activeSlide === 0 ? "slide transition-all" : "opacity-90 scale-90"
-          } relative`}
+            activeSlide === 0 ? "slide" : "opacity-90 scale-90"
+          }  ${activeSlide === 1 && "slide1"} relative`}
         >
           <img
             src="/facelessArt.png"
@@ -62,8 +62,8 @@ const Slider_: React.FC = () => {
       <div className="h-[50vh] w-full relative">
         <div
           className={` px-[5%] m-auto ${
-            activeSlide === 1 ? "slide transition-all" : "opacity-90 scale-90"
-          } relative`}
+            activeSlide === 1 ? "slide" : "opacity-90 scale-90"
+          }  ${activeSlide === 2 && "slide1"} relative`}
         >
           <img
             src="/facelessArt.png"
@@ -94,8 +94,8 @@ const Slider_: React.FC = () => {
       <div className="h-[50vh] w-full relative">
         <div
           className={` px-[5%] m-auto ${
-            activeSlide === 2 ? "slide transition-all" : "opacity-90 scale-90"
-          } relative`}
+            activeSlide === 2 ? "slide" : "opacity-90 scale-90"
+          }  ${activeSlide === 3 && "slide1"} relative`}
         >
           <img
             src="/facelessArt.png"
@@ -126,8 +126,8 @@ const Slider_: React.FC = () => {
       <div className="h-[50vh] w-full relative">
         <div
           className={` px-[5%] m-auto ${
-            activeSlide === 3 ? "slide transition-all" : "opacity-90 scale-90"
-          } relative`}
+            activeSlide === 3 ? "slide" : "opacity-90 scale-90"
+          }  ${activeSlide === 4 && "slide1"} relative`}
         >
           <img
             src="/facelessArt.png"
@@ -158,8 +158,8 @@ const Slider_: React.FC = () => {
       <div className="h-[50vh] w-full relative">
         <div
           className={` px-[5%] m-auto ${
-            activeSlide === 4 ? "slide transition-all" : "opacity-90 scale-90"
-          } relative`}
+            activeSlide === 4 ? "slide" : "opacity-90 scale-90"
+          }  ${activeSlide === 0 && "slide1"} relative`}
         >
           <img
             src="/facelessArt.png"
