@@ -3,6 +3,7 @@ import Navbar from "../navbar/Navbar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiEqualizerLine } from "react-icons/ri";
 import Slider_ from "./Slider";
+import Arts from "./Arts";
 
 const Main: React.FC = () => {
   return (
@@ -33,15 +34,7 @@ const Main: React.FC = () => {
         </p>
       </div>
       <Slider_ />
-      {/* <section className="h-[50vh] overflow-hidden"> */}
-      {/* <div className="h-[50vh] w-full relative">
-        <img
-          src="/facelessArt.png"
-          className="h-[50vh] w-[100%] "
-          alt="faceless pics"
-        />
-      </div> */}
-      {/* </section> */}
+      <Arts />
     </section>
   );
 };
