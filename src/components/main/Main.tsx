@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../navbar/Navbar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiEqualizerLine } from "react-icons/ri";
-import Slider_ from "./Slider";
+import Slider from "./Slider";
 import Arts from "./Arts";
 
 const Main: React.FC = () => {
@@ -33,7 +33,7 @@ const Main: React.FC = () => {
           Trending arts from new creators
         </p>
       </div>
-      <Slider_ />
+      <Slider />
       <Arts />
     </section>
   );
