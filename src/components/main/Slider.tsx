@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
-const Slider_: React.FC = () => {
+const Sliders: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
 
   const handleBeforeChange = (current: unknown, next: number) => {
@@ -191,4 +191,4 @@ const Slider_: React.FC = () => {
   );
 };
 
-export default Slider_;
+export default Sliders;
