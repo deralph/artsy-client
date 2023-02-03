@@ -7,7 +7,7 @@ const Arts: React.FC = () => {
       <p className="font-primary text-primary text-2xl font-bold py-2 ">
         Our Collection
       </p>
-      <div className="flex my-4 overflow-x-scroll">
+      <div className="hide flex my-4 overflow-x-scroll">
         <button className="bg-primary rounded-lg font-primary text-white text-xl font-bold py-2 px-[5%] mr-4">
           All
         </button>
@@ -27,16 +27,20 @@ const Arts: React.FC = () => {
       <section className="flex justify-between min-w-[23%] flex-wrap ">
         {Arts_.map(({ image, hot, sold, title, price }, index) => {
           return (
-            <article key={index} className="w-[23%] md:w-[29%]">
+            <article key={index} className="w-[23%] lg:w-[29%]">
               <div className="py-8 px-4 bg-[#f6f6f6]">
                 <img
                   src={image}
                   alt={title}
-                  height={250}
-                  width={200}
-                  className=""
+                  className="h-[40vh] w-full px-[2%]"
                 />
-                <p>{hot ? "hot" : " "}</p>
+                <p
+                  className={`{${
+                    hot && "bg-primary"
+                  } text-white h-10 w-auto my-3 text-center `}
+                >
+                  {hot ? "hot" : " "}
+                </p>
               </div>
               <p className="text-center">{title}</p>
               <p className="text-center">$ {price}</p>
