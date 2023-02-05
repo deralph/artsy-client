@@ -27,7 +27,7 @@ const Arts: React.FC = () => {
       <section className="flex justify-between min-w-[23%] flex-wrap ">
         {Arts_.map(({ image, hot, sold, title, price }, index) => {
           return (
-            <article key={index} className="w-[23%] lg:w-[29%]">
+            <article key={index} className="w-[23%] lg:w-[29%] ">
               <div className="py-8 px-4 bg-[#f6f6f6]">
                 <img
                   src={image}
@@ -35,9 +35,9 @@ const Arts: React.FC = () => {
                   className="h-[40vh] w-full px-[2%]"
                 />
                 <p
-                  className={`{${
+                  className={`${
                     hot && "bg-primary"
-                  } text-white h-10 w-auto my-3 text-center `}
+                  } text-white grid place-content-center w-20 h-10 p-3  my-3 text-center `}
                 >
                   {hot ? "hot" : " "}
                 </p>
