@@ -82,6 +82,23 @@ button {
   display: block;
   animation: example 5s linear 1;
 }
+.dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 20;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+}
+.dash::after {
+  content: " ";
+  width: 40%;
+  height: 1rem;
+  background: white;
+  /* pos */
+}
 
 .label {
   @apply font-primary text-white font-bold text-xl;

@@ -35,6 +35,39 @@ const Main: React.FC = () => {
       </div>
       <Slider />
       <Arts />
+      <section className="relative w-[90%] h-[60vh] mx-auto my-6 dark ">
+        <img
+          src="/facelessArt.png"
+          className="absolute w-full h-full  "
+          alt="facelessArt"
+        />
+        <div className=" w-[45%] absolute z-30 right-0 pt-3">
+          <p className="font-primary font-black text-xl text-white opacity-60 ">
+            ARTPIECE OF THE WEEK
+          </p>
+          <p className="font-primary font-black text-4xl text-white dash">
+            THE FACELESS
+          </p>
+          <p className="font-secondary text-white font-normal text-[39px]">
+            $999.9
+          </p>
+          <p className="font-primary font-black text-xl text-white opacity-60 ">
+            DESCRIPTION
+          </p>
+          <p className="font-primary font-bold text-2xl text-white">
+            An oil painting painted in the mid 90’s inspired by how people feel
+            deep down, unable to express true emotions and desires.
+          </p>
+          <div className="flex justify-between items-center">
+            <button className="p-4 bg-primary text-white rounded font-primary font-bold text-2xl">
+              Bid
+            </button>
+            <button className="p-4 text-primary bg-white rounded  font-primary font-bold text-2xl ">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
