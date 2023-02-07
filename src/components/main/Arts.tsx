@@ -33,7 +33,7 @@ const Arts: React.FC = () => {
                 <img
                   src={image}
                   alt={title}
-                  className="h-[40vh] w-full px-[2%]"
+                  className="h-[40vh] w-full px-[2%] rounded-xl"
                 />
                 <p
                   className={`font-priimary font-bold  text-xs ${
