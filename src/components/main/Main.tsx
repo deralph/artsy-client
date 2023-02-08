@@ -5,10 +5,12 @@ import { RiEqualizerLine } from "react-icons/ri";
 import Slider from "./Slider";
 import Arts from "./Arts";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 
 const Main: React.FC = () => {
   return (
     <section className="">
+      {/* <Sidebar /> */}
       <Navbar />
       <form className="mt-4 pr-[20%] py-4 items-center justify-between flex mx-auto w-[90%] border-[#00000080] border-b border-solid">
         <div className="flex justify-between basis-4/5">
