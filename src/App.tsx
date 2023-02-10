@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cart from "./components/cart/Cart";
 
 import Home from "./components/home/Home";
 import Main from "./components/main/Main";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/singlePage" element={<SingleArt />} />
           <Route path="/popup" element={<Popup />} />
           <Route path="/main" element={<Main />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<h1>ERROR PAGE</h1>} />
         </Routes>
       </main>

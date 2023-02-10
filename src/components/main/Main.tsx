@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiEqualizerLine } from "react-icons/ri";
@@ -6,15 +6,37 @@ import Slider from "./Slider";
 import Arts from "./Arts";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import { RootState } from "../../store";
+import { useDispatch } from "react-redux/es/hooks/useDispatch";
+import { side } from "../../store/side.slice";
+import ShopBy from "./ShopBy";
 
 const Main: React.FC = () => {
+  const { open, shopBy } = useSelector((state: RootState) => state.sidebar);
+  const dispatch = useDispatch();
+
   return (
-    <section className="">
-      <Sidebar />
+    <section
+      className={`${open && "h-[100vh] overflow-hidden"} ${
+        shopBy && "h-[100vh] overflow-hidden"
+      }`}
+    >
+      {open && (
+        <section className="w-full h-full absolute bg-[#00000090] z-50">
+          <Sidebar />
+        </section>
+      )}
+
+      {shopBy && <ShopBy />}
+
       <Navbar />
       <form className="mt-4 pr-[20%] py-4 items-center justify-between flex mx-auto w-[90%] border-[#00000080] border-b border-solid">
         <div className="flex justify-between basis-4/5">
-          <GiHamburgerMenu className="text-5xl p-3 bg-[#F4F4F4] text-[#1E1E1E]" />
+          <GiHamburgerMenu
+            className=" text-5xl p-3 bg-[#F4F4F4] text-[#1E1E1E]"
+            onClick={() => dispatch(side(true))}
+          />
           <div className="flex bg-[#EFEFEFB2] basis-[90%] rounded-lg p-1 ">
             <input
               type="text"
