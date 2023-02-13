@@ -10,6 +10,12 @@ interface prop {
   name: string;
   props: string[];
 }
+interface cart {
+  name: string;
+  price: string;
+  size: string;
+  image: string;
+}
 
 const Arts_: art[] = [
   {
@@ -131,6 +137,45 @@ export const shopBy: prop[] = [
   {
     name: "SIZES",
     props: ["10” x 8”", "20” x 16”", "20” x 16”", "12” x 12”", "36” x 12”"],
+  },
+];
+
+export const carts: cart[] = [
+  {
+    name: "MONA SCRIBBLE",
+    price: "225.5",
+    size: "12” x 12”",
+    image: "/cart.png",
+  },
+  {
+    name: "MONA SCRIBBLE",
+    price: "225.5",
+    size: "12” x 12”",
+    image: "/cart.png",
+  },
+  {
+    name: "MONA SCRIBBLE",
+    price: "225.5",
+    size: "12” x 12”",
+    image: "/cart.png",
+  },
+  {
+    name: "MONA SCRIBBLE",
+    price: "225.5",
+    size: "12” x 12”",
+    image: "/cart.png",
+  },
+  {
+    name: "MONA SCRIBBLE",
+    price: "225.5",
+    size: "12” x 12”",
+    image: "/cart.png",
+  },
+  {
+    name: "MONA SCRIBBLE",
+    price: "225.5",
+    size: "12” x 12”",
+    image: "/cart.png",
   },
 ];
 
