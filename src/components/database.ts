@@ -10,7 +10,7 @@ interface prop {
   name: string;
   props: string[];
 }
-interface cart {
+export interface cart {
   name: string;
   price: string;
   size: string;

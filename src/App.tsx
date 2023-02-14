@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Info from "./components/account/Info";
 import Cart from "./components/cart/Cart";
 
 import Home from "./components/home/Home";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/popup" element={<Popup />} />
           <Route path="/main" element={<Main />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/account" element={<Info />} />
           <Route path="*" element={<h1>ERROR PAGE</h1>} />
         </Routes>
       </main>

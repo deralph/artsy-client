@@ -1,23 +1,24 @@
 import React from "react";
+import { cart } from "../database";
 
-const SingleCart = () => {
+const SingleCart: React.FC<cart> = ({ name, price, size, image }) => {
   return (
-    <section className="">
-      <div className="flex items-center">
-        <img src="/cart.png" alt="cartPics"></img>
-        <div className="">
-          <p className="font-primary font-bold text-xl text-primary opacity-50">
-            MONA SCRIBBLE
-          </p>
-          <p className="font-primary font-black text-xl text-primary ">
-            $ 225.5
-          </p>
-          <p className="font-primary font-bold text-sm text-primary ">
-            12” x 12”
-          </p>
-        </div>
+    <div className="flex items-center py-6 basis-[43%] border-solid border-b border-[#00000080]">
+      <div className="p-4 bg-[#F6F6F6]">
+        <img src={image} alt={name} className="h-[200px]" />
+      </div>{" "}
+      <div className="ml-[5%]">
+        <p className="font-primary font-bold opacity-50 text-primary text-xl">
+          {name}
+        </p>
+        <p className="py-4 font-primary font-black text-primary text-xl ">
+          {price}
+        </p>
+        <p className="text-[#1E1E1ECC] font-primary text-xl font-bold">
+          {size}
+        </p>
       </div>
-    </section>
+    </div>
   );
 };
 
