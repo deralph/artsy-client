@@ -25,7 +25,7 @@ const Home: React.FC = () => {
           </p>
           <a
             href="/signup"
-            className="bg-white rounded-3xl px-[10%] py-[1.5%] font-primary text-3xl font-bold sm:text-xl"
+            className="bg-white rounded-3xl px-[10%] py-[1%] font-primary text-3xl font-bold sm:text-xl"
           >
             Explore
           </a>

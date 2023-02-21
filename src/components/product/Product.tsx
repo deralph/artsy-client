@@ -3,6 +3,7 @@ import Navbar from "../navbar/Navbar";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import axios from "../../extra/axios";
+import Title from "../../extra/Title";
 
 const Product: React.FC = () => {
   const [preview, setPreview] = useState<string | unknown>("");
@@ -82,12 +83,7 @@ const Product: React.FC = () => {
     <section className="">
       <Navbar />
       <article className="w-screen px-[5%]">
-        <div className="relative mt-8">
-          <BsArrowLeftSquareFill className="text-4xl absolute top-[50%] -translate-y-[50%]" />
-          <p className="text-primary font-black font-primary text-4xl text-center">
-            Upload Artwork
-          </p>
-        </div>
+        <Title title="Upload Artwork" />
         <div className="flex justify-center ">
           <form className="max-w-[700px] w-full mb-20">
             <div

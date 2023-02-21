@@ -1,8 +1,11 @@
 import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import Arts_ from "../database";
 
 const Arts: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="w-[90%] mx-auto my-8">
       <p className="font-primary text-primary text-2xl font-bold py-2 ">
@@ -28,7 +31,11 @@ const Arts: React.FC = () => {
       <section className="flex justify-between min-w-[23%] flex-wrap ">
         {Arts_.map(({ image, hot, sold, title, price }, index) => {
           return (
-            <article key={index} className="w-[23%] lg:w-[29%] mb-4">
+            <article
+              key={index}
+              className="w-[23%] lg:w-[29%] mb-4"
+              onClick={() => navigate("/singlepage")}
+            >
               <div className="py-3 px-4 bg-[#f6f6f6]">
                 <img
                   src={image}

@@ -5,6 +5,7 @@ import Cart from "./components/cart/Cart";
 
 import Home from "./components/home/Home";
 import Main from "./components/main/Main";
+import PaymentForm from "./components/payment/PaymentForm";
 import Popup from "./components/product/Popup";
 import Product from "./components/product/Product";
 import SingleArt from "./components/product/SingleArt";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/main" element={<Main />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/account" element={<Info />} />
+          <Route path="/payment" element={<PaymentForm />} />
           <Route path="*" element={<h1>ERROR PAGE</h1>} />
         </Routes>
       </main>

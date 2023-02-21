@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import authSlice from "./auth.slice";
 import loggedSlice from "./side.slice";
 
 export const store = configureStore({
   reducer: {
     sidebar: loggedSlice,
+    auth: authSlice,
   },
 });
 

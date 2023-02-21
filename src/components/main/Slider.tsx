@@ -3,9 +3,11 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Slider_: React.FC = () => {
+  const navigate = useNavigate();
+
   const [activeSlide, setActiveSlide] = useState<number>(0);
 
   const handleBeforeChange = (current: unknown, next: number) => {
@@ -27,7 +29,10 @@ const Slider_: React.FC = () => {
   };
   return (
     <Slider {...settings} className="mt-8">
-      <div className="h-[50vh] w-full relative">
+      <div
+        className="h-[50vh] w-full relative"
+        onClick={() => navigate("/singlePage")}
+      >
         <div
           className={` px-[5%] m-auto ${
             activeSlide === 0 ? "slide" : "opacity-90 scale-90"
@@ -59,7 +64,10 @@ const Slider_: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-[50vh] w-full relative">
+      <div
+        className="h-[50vh] w-full relative"
+        onClick={() => navigate("/singlePage")}
+      >
         <div
           className={` px-[5%] m-auto ${
             activeSlide === 1 ? "slide" : "opacity-90 scale-90"
@@ -91,7 +99,10 @@ const Slider_: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-[50vh] w-full relative">
+      <div
+        className="h-[50vh] w-full relative"
+        onClick={() => navigate("/singlePage")}
+      >
         <div
           className={` px-[5%] m-auto ${
             activeSlide === 2 ? "slide" : "opacity-90 scale-90"
@@ -123,7 +134,10 @@ const Slider_: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-[50vh] w-full relative">
+      <div
+        className="h-[50vh] w-full relative"
+        onClick={() => navigate("/singlePage")}
+      >
         <div
           className={` px-[5%] m-auto ${
             activeSlide === 3 ? "slide" : "opacity-90 scale-90"
@@ -155,7 +169,10 @@ const Slider_: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-[50vh] w-full relative">
+      <div
+        className="h-[50vh] w-full relative"
+        onClick={() => navigate("/singlePage")}
+      >
         <div
           className={` px-[5%] m-auto ${
             activeSlide === 4 ? "slide" : "opacity-90 scale-90"

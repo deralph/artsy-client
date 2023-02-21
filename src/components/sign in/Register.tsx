@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Buyer from "./Buyer";
 import Seller from "./Seller";
 
@@ -8,6 +9,8 @@ type Login = {
 
 const Register: React.FC<Login> = ({ login }) => {
   const [seller, setSeller] = useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   return (
     <section className="flex h-screen justify-between w-screen bg-primary slg:justify-center login">
@@ -42,7 +45,10 @@ const Register: React.FC<Login> = ({ login }) => {
             </p>
           )}
           <div className="flex items-center mt-12">
-            <button className="px-6 py-4 font-primary text-xl font-bold text-white border-solid border-white border-2">
+            <button
+              className="px-6 py-4 font-primary text-xl font-bold text-white border-solid border-white border-2"
+              onClick={() => navigate("/main")}
+            >
               {login ? "Login" : "Sign Up"}
             </button>
             {!seller && (

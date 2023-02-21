@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiEqualizerLine } from "react-icons/ri";
+import { IoNotificationsSharp } from "react-icons/io5";
+import { TiCloudStorage } from "react-icons/ti";
 import Slider from "./Slider";
 import Arts from "./Arts";
 import Footer from "./Footer";
@@ -9,18 +11,24 @@ import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { RootState } from "../../store";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
-import { side } from "../../store/side.slice";
+import { shop, side, viewNotification } from "../../store/side.slice";
 import ShopBy from "./ShopBy";
+import Notification from "./Notification";
+import { useNavigate } from "react-router-dom";
 
 const Main: React.FC = () => {
-  const { open, shopBy } = useSelector((state: RootState) => state.sidebar);
+  const { open, shopBy, Notifications } = useSelector(
+    (state: RootState) => state.sidebar
+  );
+  const { seller } = useSelector((state: RootState) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <section
       className={`${open && "h-[100vh] overflow-hidden"} ${
         shopBy && "h-[100vh] overflow-hidden"
-      }`}
+      } ${Notifications && "h-[100vh] overflow-hidden"}`}
     >
       {open && (
         <section className="w-full h-full absolute bg-[#00000090] z-50">
@@ -29,6 +37,8 @@ const Main: React.FC = () => {
       )}
 
       {shopBy && <ShopBy />}
+
+      {Notifications && <Notification />}
 
       <Navbar />
       <form className="mt-4 pr-[20%] py-4 items-center justify-between flex mx-auto w-[90%] border-[#00000080] border-b border-solid">
@@ -48,7 +58,27 @@ const Main: React.FC = () => {
             </button>
           </div>
         </div>
-        <RiEqualizerLine className="bg-[#EFEFEFB2] text-primary p-2 text-4xl" />
+        <div className="flex items-center">
+          <RiEqualizerLine
+            className="bg-[#EFEFEFB2] text-primary p-2 text-4xl"
+            onClick={() => dispatch(shop(true))}
+          />
+          <div
+            className="ml-3 relative"
+            onClick={() => dispatch(viewNotification(true))}
+          >
+            <IoNotificationsSharp className=" text-primary text-3xl " />
+            <span className="text-[10px] top-0 right-0 font-bold grid place-content-center w-4 h-4 bg-[#FF1E1E] absolute rounded-[50%]">
+              01
+            </span>
+          </div>
+          {seller && (
+            <TiCloudStorage
+              className="bg-[#EFEFEFB2] mx-4 text-primary  text-5xl px-2"
+              onClick={() => navigate("/product")}
+            />
+          )}{" "}
+        </div>
       </form>
       <div className="mt-8 ml-[5%]">
         <p className="font-primary text-primary font-bold text-3xl pb-1">
@@ -85,10 +115,16 @@ const Main: React.FC = () => {
             deep down, unable to express true emotions and desires.
           </p>
           <div className="flex justify-between items-center w-3/5 my-4">
-            <button className="basis-[38%] py-2 px-4 bg-primary text-white rounded font-primary font-bold text-xl">
+            <button
+              className="basis-[38%] py-2 px-4 bg-primary text-white rounded font-primary font-bold text-xl"
+              onClick={() => navigate("/cart")}
+            >
               Bid
             </button>
-            <button className="basis-[55%] py-2 px-4 text-primary bg-white rounded  font-primary font-bold text-xl ">
+            <button
+              className="basis-[55%] py-2 px-4 text-primary bg-white rounded  font-primary font-bold text-xl "
+              onClick={() => navigate("/cart")}
+            >
               Add to cart
             </button>
           </div>

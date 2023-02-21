@@ -4,11 +4,13 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 export interface loggedState {
   open: boolean;
   shopBy: boolean;
+  Notifications: boolean;
 }
 
 const initialState: loggedState = {
   open: false,
-  shopBy: true,
+  shopBy: false,
+  Notifications: false,
 };
 
 export const loggedSlice = createSlice({
@@ -22,10 +24,13 @@ export const loggedSlice = createSlice({
     shop: (state, action: PayloadAction<boolean>) => {
       state.shopBy = action.payload;
     },
+    viewNotification: (state, action: PayloadAction<boolean>) => {
+      state.Notifications = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { side, shop } = loggedSlice.actions;
+export const { side, shop, viewNotification } = loggedSlice.actions;
 
 export default loggedSlice.reducer;

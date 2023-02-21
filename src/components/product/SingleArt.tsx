@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
-import { FaFilter, FaMinus, FaPlus } from "react-icons/fa";
+import { FaClock, FaFilter, FaMinus, FaPlus } from "react-icons/fa";
+import { MdVerified } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 
 const SingleArt: React.FC = () => {
+  const navigate = useNavigate();
+
   const [bid, setBid] = useState<number>(100);
   return (
     <section>
       <Navbar />
-      <section className="w-[80vw] mx-auto">
+      <section className="w-[70vw] mx-auto">
         <div className="border-b-2 border-solid border-primary flex justify-between items-center  mx-auto my-4 pb-4 pr-[15%]">
-          <BsArrowLeftSquareFill className="text-4xl " />
+          <BsArrowLeftSquareFill
+            className="text-4xl "
+            onClick={() => navigate(-1)}
+          />
           <form className="flex items-center">
             <input
               type="text"
@@ -30,13 +37,13 @@ const SingleArt: React.FC = () => {
         />
         <div className="flex items-center justify-between p-6 border-y-2 border-solid border-primary">
           <div className="flex items-center">
-            <BsArrowLeftSquareFill />{" "}
+            <MdVerified className="text-2xl" />{" "}
             <p className="ml-6 text-primary text-xl capitalize font-bold">
               raphael ayo
             </p>{" "}
           </div>
           <div className="flex items-center">
-            <BsArrowLeftSquareFill />{" "}
+            <FaClock />{" "}
             <p className="ml-6 text-primary text-xl capitalize font-bold">
               1hr 30m
             </p>{" "}

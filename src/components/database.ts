@@ -16,6 +16,11 @@ export interface cart {
   size: string;
   image: string;
 }
+export interface Notification {
+  profileDp: string;
+  message: string;
+  time: string;
+}
 
 const Arts_: art[] = [
   {
@@ -176,6 +181,49 @@ export const carts: cart[] = [
     price: "225.5",
     size: "12” x 12”",
     image: "/cart.png",
+  },
+];
+
+export const notification: Notification[] = [
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
+  },
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
+  },
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
+  },
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
+  },
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
+  },
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
+  },
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
+  },
+  {
+    profileDp: "/ProfileDp.png",
+    message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
+    time: "12 secs ago",
   },
 ];
 
