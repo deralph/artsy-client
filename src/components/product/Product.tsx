@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Navbar from "../navbar/Navbar";
-import { BsArrowLeftSquareFill } from "react-icons/bs";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import axios from "../../extra/axios";
 import Title from "../../extra/Title";

@@ -1,6 +1,4 @@
 import React from "react";
-import { BsArrowLeftSquareFill } from "react-icons/bs";
-import { FaArrowLeft } from "react-icons/fa";
 import Title from "../../extra/Title";
 import { carts } from "../database";
 import Navbar from "../navbar/Navbar";

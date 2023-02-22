@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BsArrowLeftSquareFill } from "react-icons/bs";
-import { FaClock, FaFilter, FaMinus, FaPlus, FaSearch } from "react-icons/fa";
+import { FaClock, FaMinus, FaPlus, FaSearch } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 import { RiEqualizerLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
