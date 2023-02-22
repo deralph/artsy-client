@@ -3,11 +3,17 @@ import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{ main?: boolean }> = ({ main }) => {
   const navigate = useNavigate();
   return (
-    <nav className="flex justify-between items-center w-screen py-[1%] px-[10%]">
-      <p className="text-primary font-secondary font-normal text-3xl">ARTSY</p>
+    <nav className="flex justify-between items-center w-screen mt-4 py-[1%] px-[10%]">
+      <p
+        className={`text-primary font-secondary font-normal text-3xl${
+          main && "md:w-full md:text-center"
+        }`}
+      >
+        ARTSY
+      </p>
       <ul className="flex items-center text-primary font-bold w-3/5 justify-between md:hidden xl:w-4/5">
         <li className="text-2xl lg:text-xl"> Home</li>
         <li className="text-2xl lg:text-xl">Marketplace</li>
@@ -25,7 +31,7 @@ const Navbar: React.FC = () => {
           <FaUserCircle />
         </li>
       </ul>
-      <GiHamburgerMenu className="hidden md:block text-3xl" />
+      {!main && <GiHamburgerMenu className="hidden md:block text-3xl" />}
     </nav>
   );
 };

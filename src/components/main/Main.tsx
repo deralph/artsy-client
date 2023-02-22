@@ -41,11 +41,11 @@ const Main: React.FC = () => {
 
       {Notifications && <Notification />}
 
-      <Navbar />
+      <Navbar main />
       <form className="mt-4 pr-[20%] slg:pr-0 py-4 sm:py-2 items-center md:items-end justify-between md:flex-col flex mx-auto w-[90%] border-[#00000080] border-b border-solid">
         <div className="flex justify-between basis-4/5 md:w-full sml:bg-[#efefefb2] items-center">
           <GiHamburgerMenu
-            className=" text-5xl sml:text-2xl p-3 sml:p-1 bg-[#F4F4F4] sml:bg-transparent text-[#1E1E1E]"
+            className=" text-5xl sml:text-3xl p-3 sml:p-1 bg-[#F4F4F4] sml:bg-transparent text-[#1E1E1E]"
             onClick={() => dispatch(side(true))}
           />
           <div className="flex items-center bg-[#EFEFEFB2] sml:bg-transparent basis-[90%] rounded-lg p-1 ">
@@ -57,7 +57,7 @@ const Main: React.FC = () => {
             <button className="bg-[#1E1E1E] text-white rounded-lg w-[140px] sm:w-auto sm:p-2 font-primary font-bold text-xl sml:text-base slg:hidden ">
               Search
             </button>
-            <FaSearch className="bg-[#1E1E1E] text-white rounded-[50%]  font-primary font-bold text-2xl p-1 hidden slg:block" />
+            <FaSearch className="bg-[#1E1E1E] text-white rounded-[50%]  font-primary font-bold text-3xl p-1 hidden slg:block" />
           </div>
         </div>
         <div className="flex items-center md:mt-2">
