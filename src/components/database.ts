@@ -21,6 +21,11 @@ export interface Notification {
   message: string;
   time: string;
 }
+export interface Slider {
+  src: string;
+  title: string;
+  desc: string;
+}
 
 const Arts_: art[] = [
   {
@@ -224,6 +229,39 @@ export const notification: Notification[] = [
     profileDp: "/ProfileDp.png",
     message: "Tina Moore just placed a bid on “THE BARBERSHOP”",
     time: "12 secs ago",
+  },
+];
+
+export const slider: Slider[] = [
+  {
+    src: "/facelessArt.png",
+    title: "HE CRIES",
+    desc: " An oil painting sowing the image of a child oil painting sowing the image of a child",
+  },
+  {
+    src: "/facelessArt.png",
+    title: "HE CRIES",
+    desc: " An oil painting sowing the image of a child oil painting sowing the image of a child",
+  },
+  {
+    src: "/facelessArt.png",
+    title: "HE CRIES",
+    desc: " An oil painting sowing the image of a child oil painting sowing the image of a child",
+  },
+  {
+    src: "/facelessArt.png",
+    title: "HE CRIES",
+    desc: " An oil painting sowing the image of a child oil painting sowing the image of a child",
+  },
+  {
+    src: "/facelessArt.png",
+    title: "HE CRIES",
+    desc: " An oil painting sowing the image of a child oil painting sowing the image of a child",
+  },
+  {
+    src: "/facelessArt.png",
+    title: "HE CRIES",
+    desc: " An oil painting sowing the image of a child oil painting sowing the image of a child",
   },
 ];
 

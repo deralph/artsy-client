@@ -110,6 +110,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: block;
   animation: example 5s linear 1;
 }
+
 .dark::after {
   content: "";
   position: absolute;

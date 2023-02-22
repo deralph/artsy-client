@@ -3,8 +3,8 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <footer className="">
-      <div className="py-[5%] flex justify-evenly border-y border-solid border-[#00000080] ">
-        <ul className="">
+      <div className="py-[5%] sm:pl-[5%] flex sm:flex-col justify-evenly border-y border-solid border-[#00000080] ">
+        <ul className="mt-8">
           <li className="font-black text-lg font-primary">About</li>
           <li className="text-primary opacity-60 font-primary font-bold text-base py-2">
             News & Stories
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             Showrooms
           </li>
         </ul>
-        <ul className="">
+        <ul className="mt-8">
           <li className="font-black text-lg font-primary">Customer Services</li>
           <li className="text-primary opacity-60 font-primary font-bold text-base py-2">
             Showrooms
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             FAQs
           </li>
         </ul>
-        <ul className="">
+        <ul className="mt-8">
           <li className="font-black text-lg font-primary">Artworks</li>
           <li className="text-primary opacity-60 font-primary font-bold text-base py-2">
             Futuristic
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
           </li>
         </ul>
       </div>
-      <div className="w-3/5 m-auto flex justify-between p-5">
+      <div className="w-3/5 md:w-full m-auto flex justify-between p-5">
         <p className="text-black font-black opacity-60 font-primary text-sm">
           ABOUT US
         </p>

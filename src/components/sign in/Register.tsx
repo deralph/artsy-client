@@ -15,11 +15,11 @@ const Register: React.FC<Login> = ({ login }) => {
   return (
     <section className="flex h-screen justify-between w-screen bg-primary slg:justify-center login">
       <article className="p-[5%] basis-3/5 overflow-scroll hide slg:max-w-[700px] slg:basis-full z-20">
-        <h1 className="font-secondary font-normal text-white text-5xl">
+        <h1 className="font-secondary font-normal text-white text-5xl sml:text-3xl">
           Welcome to Artsy{" "}
         </h1>
         {login ? (
-          <p className="font-primary text-2xl font-medium text-white py-4">
+          <p className="font-primary text-2xl sml:text-lg font-medium text-white py-4">
             Log In or{" "}
             <a href="/signup" className="text-[#0094FF]">
               create an account
@@ -37,7 +37,7 @@ const Register: React.FC<Login> = ({ login }) => {
         <form action="" className="mt-[5%]">
           {seller ? <Seller /> : login ? <Buyer login /> : <Buyer />}
           {!login && (
-            <p className="text-white font-primary font-medium text-base mt-4">
+            <p className="text-white font-primary font-medium text-base sml:text-xs mt-4">
               By clicking the “Sign Up” button, you are creating an Artsy
               account, and you agree to Artsy’s{" "}
               <span className="text-[#0094FF] underline">Terms of Use</span> and
@@ -52,7 +52,7 @@ const Register: React.FC<Login> = ({ login }) => {
               {login ? "Login" : "Sign Up"}
             </button>
             {!seller && (
-              <p className="text-white font-primary text-xl font-medium ml-12">
+              <p className="text-white font-primary text-xl sml:text-base font-medium ml-12">
                 Are you a
                 <span
                   className="text-[#0094ff]"

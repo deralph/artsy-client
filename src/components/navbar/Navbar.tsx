@@ -1,5 +1,6 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -7,12 +8,12 @@ const Navbar: React.FC = () => {
   return (
     <nav className="flex justify-between items-center w-screen py-[1%] px-[10%]">
       <p className="text-primary font-secondary font-normal text-3xl">ARTSY</p>
-      <ul className="flex items-center text-primary font-bold w-3/5 justify-between md:hidden">
-        <li className="text-2xl"> Home</li>
-        <li className="text-2xl ">Marketplace</li>
-        <li className="text-2xl ">Collections</li>
+      <ul className="flex items-center text-primary font-bold w-3/5 justify-between md:hidden xl:w-4/5">
+        <li className="text-2xl lg:text-xl"> Home</li>
+        <li className="text-2xl lg:text-xl">Marketplace</li>
+        <li className="text-2xl lg:text-xl">Collections</li>
         <li
-          className="text-2xl flex items-center "
+          className="text-2xl lg:text-xl flex items-center "
           onClick={() => navigate("/cart")}
         >
           My Cart{" "}
@@ -24,6 +25,7 @@ const Navbar: React.FC = () => {
           <FaUserCircle />
         </li>
       </ul>
+      <GiHamburgerMenu className="hidden md:block text-3xl" />
     </nav>
   );
 };

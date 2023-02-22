@@ -85,13 +85,13 @@ const Product: React.FC = () => {
       <article className="w-screen px-[5%]">
         <Title title="Upload Artwork" />
         <div className="flex justify-center ">
-          <form className="max-w-[700px] w-full mb-20">
+          <form action="" className="max-w-[700px] w-full mb-20">
             <div
-              className="w-full min-h-[300px] h-[30vh] border-dashed border-[6px] border-[#B9B9B9B2] my-7 flex flex-col items-center justify-center"
+              className="w-full min-h- h-[30vh] sml:h-[100px] border-dashed border-[6px] sml:border-2  border-[#B9B9B9B2] my-7 flex flex-col items-center justify-center"
               onClick={() => image.current.click()}
             >
-              <FaCloudUploadAlt className="text-8xl text-[#B9B9B9B2]" />
-              <p className="font-primary font-bold text-[44px] text-[#B9B9B9B2] ">
+              <FaCloudUploadAlt className="text-8xl sml:text-5xl text-[#B9B9B9B2]" />
+              <p className="font-primary font-bold text-[44px] sml:text-lg text-[#B9B9B9B2] ">
                 Browse Files
               </p>
               <input
@@ -115,7 +115,7 @@ const Product: React.FC = () => {
             )}
             <label
               htmlFor="art name"
-              className="font-primary text-2xl font-black "
+              className="font-primary text-2xl font-black sml:text-base "
             >
               Art Name
             </label>
@@ -127,7 +127,7 @@ const Product: React.FC = () => {
 
             <label
               htmlFor="art name"
-              className="font-primary text-2xl font-black "
+              className="font-primary text-2xl font-black sml:text-base "
             >
               Description
             </label>
@@ -139,7 +139,7 @@ const Product: React.FC = () => {
 
             <label
               htmlFor="art name"
-              className="font-primary text-2xl font-black "
+              className="font-primary text-2xl font-black sml:text-base "
             >
               Category
             </label>
@@ -160,7 +160,7 @@ const Product: React.FC = () => {
 
             <label
               htmlFor="art name"
-              className="font-primary text-2xl font-black "
+              className="font-primary text-2xl font-black sml:text-base "
             >
               Size
             </label>
@@ -172,7 +172,7 @@ const Product: React.FC = () => {
 
             <label
               htmlFor="art name"
-              className="font-primary text-2xl font-black "
+              className="font-primary text-2xl font-black sml:text-base "
             >
               Price
             </label>
@@ -182,15 +182,15 @@ const Product: React.FC = () => {
               className="border-[2px] border-solid border-primary p-2 w-full mt-2 mb-6"
             />
 
-            <p className="mb-4 font-primary text-2xl font-black text-primary ">
+            <p className="mb-4 font-primary text-2xl sml:text-lg font-black text-primary ">
               Anonymity
             </p>
-            <p className="mb-4 font-primary text-2xl font-black text-primary ">
+            <p className="mb-4 font-primary text-2xl sml:text-lg font-black text-primary ">
               Save to Drafts
             </p>
 
             <button
-              className="w-full py-4 bg-primary text-white text-4xl"
+              className="w-full py-4 bg-primary text-white text-4xl sml:text-xl"
               onClick={(e) => submit(e)}
             >
               Preview

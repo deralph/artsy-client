@@ -7,7 +7,7 @@ const Popup: React.FC = () => {
       <article className="bg-white  p-[5%]">
         <div className="flex justify-center items-center flex-col">
           <MdVerified className="w-[50%]  min-h-[150px] text-primary " />
-          <p className="text-center font-bold text-2xl">
+          <p className="text-center font-bold text-2xl sm:text-base">
             You have successfully placed a bid for this artpiece. <br />{" "}
             Goodluck!!
           </p>
@@ -18,7 +18,7 @@ const Popup: React.FC = () => {
             Add To Cart
           </button>
         </div>
-        <div className="flex justify-center mt-6 mb-[%]">
+        <div className="flex justify-center mt-6 ">
           <button className="w-full text-xl bg-primary my-2 text-white py-2  font-bold">
             Place A Bid
           </button>

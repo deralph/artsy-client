@@ -8,23 +8,23 @@ const Arts: React.FC = () => {
 
   return (
     <section className="w-[90%] mx-auto my-8">
-      <p className="font-primary text-primary text-2xl font-bold py-2 ">
+      <p className="font-primary text-primary text-2xl sml:text-lg font-bold py-2 ">
         Our Collection
       </p>
-      <div className="hide flex my-4 overflow-x-scroll">
-        <button className="bg-primary rounded-lg font-primary text-white text-xl font-bold py-2 px-[5%] mr-4">
+      <div className="hide flex my-4 overflow-scroll">
+        <button className="bg-primary rounded-lg font-primary text-white text-xl sml:text-base font-bold py-2 px-[5%] mr-4">
           All
         </button>
-        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl font-bold py-2 px-[5%] mr-4">
+        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl sml:text-base font-bold py-2 px-[5%] mr-4">
           Newest
         </button>
-        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl font-bold py-2 px-[5%] mr-4">
+        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl sml:text-base font-bold py-2 px-[5%] mr-4">
           Prices
         </button>
-        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl font-bold py-2 px-[5%] mr-4">
+        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl sml:text-base font-bold py-2 px-[5%] mr-4">
           Artist
         </button>
-        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl font-bold py-2 px-[5%] mr-4">
+        <button className="bg-[#f6f6f6] rounded-lg font-primary text-primary text-xl sml:text-base font-bold py-2 px-[5%] mr-4">
           Location
         </button>
       </div>
@@ -33,7 +33,7 @@ const Arts: React.FC = () => {
           return (
             <article
               key={index}
-              className="w-[23%] lg:w-[29%] mb-4"
+              className="w-[23%] lg:w-[29%] mb-4 sml:w-[47%]"
               onClick={() => navigate("/singlepage")}
             >
               <div className="py-3 px-4 bg-[#f6f6f6]">
@@ -49,7 +49,7 @@ const Arts: React.FC = () => {
                 >
                   {hot ? "HOT" : " "}
                 </p>
-                <p className="text-center  font-primary text-primary text-xl font-bold capitalize">
+                <p className="text-center  font-primary text-primary text-xl sml:text-base font-bold capitalize">
                   {title}
                 </p>
                 <p className="text-center font-family font-black  text-primary text-base">
@@ -59,20 +59,20 @@ const Arts: React.FC = () => {
             </article>
           );
         })}
-        <div className="flex">
-          <button className="mr-3 py-2 px-4 font-bold bg-primary  text-white font-primary text-2xl">
+        <div className="flex sml:mt-8">
+          <button className="mr-3 py-2 px-4 font-bold bg-primary  text-white font-primary text-2xl sml:text-base">
             1
           </button>
-          <button className="mr-3 py-2 px-4 font-bold bg-[#F6F6F6] text-primary font-primary text-2xl">
+          <button className="mr-3 py-2 px-4 font-bold bg-[#F6F6F6] text-primary font-primary text-2xl sml:text-base">
             2
           </button>
-          <button className="mr-3 py-2 px-4 font-bold bg-[#F6F6F6] text-primary font-primary text-2xl">
+          <button className="mr-3 py-2 px-4 font-bold bg-[#F6F6F6] text-primary font-primary text-2xl sml:text-base">
             3
           </button>
-          <button className="mr-3 py-2 px-4 bg-[#F6F6F6] text-primary font-primary text-2xl">
+          <button className="mr-3 py-2 px-4 bg-[#F6F6F6] text-primary font-primary text-2xl sml:text-base">
             <FaArrowLeft />{" "}
           </button>
-          <button className="mr-3 py-2 px-4 bg-primary   text-white font-primary text-2xl">
+          <button className="mr-3 py-2 px-4 bg-primary   text-white font-primary text-2xl sml:text-base">
             <FaArrowRight />
           </button>
         </div>
